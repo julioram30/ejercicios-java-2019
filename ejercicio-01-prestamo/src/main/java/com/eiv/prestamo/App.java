@@ -53,13 +53,15 @@ public class App {
     
     public Optional<PrestamoDatos> cargarDatos() {
         
-        try(Scanner scanner = new Scanner(System.in)) {
+        try (Scanner scanner = new Scanner(System.in)) {
             
             System.out.println("Ingrese capital del prestamo: ");
             BigDecimal capital = scanner.nextBigDecimal();
             
             System.out.println("Ingrese cantidad de cuotas del prestamo: ");
             Integer cuotas = scanner.nextInt();
+            
+            
             
             System.out.println("Ingrese tasa nominal anual: ");
             BigDecimal tna = scanner.nextBigDecimal();
@@ -95,7 +97,7 @@ public class App {
         
         List<Cuota> cuotas = new ArrayList<>();
         
-        for(int i = 0; i < nrocuotas; i++) {
+        for (int i = 0; i < nrocuotas; i++) {
             
             BigDecimal interes = saldoCapital.multiply(razon)
                     .setScale(2, RoundingMode.HALF_UP);

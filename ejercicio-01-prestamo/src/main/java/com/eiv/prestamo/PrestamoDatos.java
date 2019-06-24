@@ -10,6 +10,8 @@ public class PrestamoDatos {
     private Integer cuotas;
     private BigDecimal tna;
     
+    
+    
     public PrestamoDatos() {
     }
 
